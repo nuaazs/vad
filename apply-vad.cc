@@ -1,5 +1,6 @@
 /* Created on 2017-03-01
  * Author: Binbin Zhang
+ * Modified on 2023-06-17 by Sheng Zhao
  */
 
 #include <stdio.h>
@@ -75,7 +76,7 @@ int main(int argc, char *argv[]) {
         int tags = vad.IsSpeech(data+i, num_point_per_frame) ? 1 : 0;
         vad_reslut.push_back(tags);
         if (tags == 1) num_speech_frames++;
-        printf("%f %d \n", float(i) / sample_rate, tags);
+        //printf("%f %d \n", float(i) / sample_rate, tags);
     }
 
     int num_speech_sample = 
